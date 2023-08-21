@@ -1,0 +1,17 @@
+{
+    "baseUrl": "http://127.0.0.1:5173",
+    "supportFile": "cypress/support/index.js",
+    "integrationFolder": "cypress/integration",
+    "pluginsFile": "cypress/plugins/index.js",
+    "fixturesFolder": "cypress/fixtures",
+    "screenshotsFolder": "cypress/screenshots",
+    "videosFolder": "cypress/videos",
+    "chromeWebSecurity": false,
+    "defaultCommandTimeout": 10000,
+    "waitForAnimations": true,
+    "env": {},
+    "viewportWidth": 1280,
+    "viewportHeight": 720,
+    "includeFolder": ["cypress/support"]
+  }
+  

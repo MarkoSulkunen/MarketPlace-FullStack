@@ -1,0 +1,66 @@
+/* modal container */
+.modal {
+    z-index: 100;
+    position: fixed; /* keeps the modal fixed relative to the viewport */
+    top: 2vh; /* sets distance from the top of the viewport */
+    left: 10%; /* sets distance from the left */
+    width: 80%;
+    background: rgb(140, 139, 139);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.26);
+    border-radius: 30px;
+  }
+  
+  /* header */
+  .modal__header {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    background: rgb(11, 11, 11);
+    color: white;
+  }
+  
+  /* header title */
+  .modal__header h2 {
+    margin: 0.5rem;
+  }
+  
+  .modal__content {
+    padding: 1rem 0.5rem;
+  }
+  
+  .modal__footer {
+    padding: 1rem 0.5rem;
+  }
+  
+  /* media query for larger screens */
+  @media (min-width: 768px) {
+    .modal {
+      left: calc(50% - 20rem); /* centers modal horizontally */ 
+      width: 40rem;
+    }
+  }
+  
+  /* modal enter animation */
+  .modal-enter {
+    transform: translateY(-10rem); /* moves the modal above viewport */
+    opacity: 0;
+  }
+  
+  .modal-enter-active {
+    transform: translateY(0); /* moves modal into the viewport */
+    opacity: 1;
+    transition: all 200ms; /* transition duration */
+  }
+  
+  .modal-exit {
+    transform: translateY(0); /* keeps modal in the viewport */
+    opacity: 1;
+  }
+  
+  .modal-exit-active {
+    transform: translateY(-10rem); /* moves modal above the viewport */
+    opacity: 0;
+    transition: all 200ms;
+  }
+  

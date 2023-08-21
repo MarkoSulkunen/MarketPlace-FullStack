@@ -1,0 +1,65 @@
+/* defines the margin of product item */
+.product-item {
+    margin: 4rem 0;
+  }
+
+/* defines the padding of product items content */
+  .product-item__content {
+    padding: 0;
+  }
+
+/* defines the padding and text alignment of product info */  
+  .product-item__info {
+    padding: 1rem;
+    text-align: center;
+  }
+
+/* defines width, height and margin of product image */
+  .product-item__image {
+    width: 100%;
+    height: 50%;
+    margin-right: 1.5rem;
+  }
+
+/* defines width, height and object fit of products image element */
+  .product-item__image img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+/* defines margin of products heading elements */
+  .product-item__info h2,
+  .product-item__info h3 {
+    margin: 0 0 0.5rem 0;
+  }
+
+/* defines padding, text alignment and border of products action section */
+  .product-item__actions {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #ccc;
+  }
+
+/* defines padding of products modal content */
+  .product-item__modal-content {
+    padding: 0;
+  }
+
+/* defines text alignment of products modal actions */
+  .product-item__modal-actions {
+    text-align: right;
+  }
+
+/* defines the margin of products action buttons and links */
+  .product-item__actions button,
+  .product-item__actions a {
+    margin: 0.5rem;
+  }
+
+/* defines height of product image for larger screens */
+  @media (min-width: 768px) {
+    .product-item__image {
+      height: 10rem;
+    } 
+  }

@@ -1,0 +1,81 @@
+.nav-links {
+    /* list styles */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* container styles */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links li {
+    /* margin between list items */
+    margin: 1rem;
+  }
+  .nav-links a {
+    /* link styles */
+    border: 1px solid transparent;
+    color: #292929;
+    border-radius: 30%;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  .nav-links a:hover,
+  .nav-links a:active,
+  .nav-links a.active {
+    /* link styles on hover, active and selected */
+    background: #2d2d38;
+    border-color: #292929;
+    color: #f9f4f4;
+  }
+  .nav-links button {
+    /* button styles */
+    cursor: pointer;
+    border: 1px solid #292929;
+    border-radius: 30%;
+    color: #4e4747;
+    background: transparent;
+    padding: 0.5rem;
+    font: inherit;
+  }
+  .nav-links button:focus {
+    /* remove button focus outline */
+    outline: none;
+  }
+  .nav-links button:hover,
+  .nav-links button:active {
+    /* button styles on hover and active */
+    background: #3c3939;
+    color: white;
+    border-radius: 30%;
+  }
+
+  /* Changes styles when screen size is 768px or greater */
+  @media (min-width: 768px) {
+    .nav-links {
+      flex-direction: row;
+    }
+    .nav-links li {
+      margin: 0 0.5rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+    .nav-links button {
+      border: 1px solid rgb(76, 74, 74);
+      border-radius: 40%;
+      color: rgb(255, 255, 255);
+      background: #121240;
+    }
+    
+    .nav-links button:hover,
+    .nav-links button:active {
+      background: #121223;
+      color: #faf9f9;
+    }
+  }
+  

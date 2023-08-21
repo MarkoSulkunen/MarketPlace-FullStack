@@ -1,0 +1,29 @@
+.product-list {
+  /* Removes default list-style and adds margin and padding */
+  list-style: none;
+  margin: 2rem auto;
+  padding: 0;
+  width: 100%;
+  /* Makes list a flex container and wrap items to multiple rows */
+  display: flex;
+  flex-wrap: wrap;
+  /* Leaves equal space betqween items */
+  justify-content: space-between;
+}
+
+.product-list li {
+  /* Makes item take up half of the available space minus 1rem margin */
+  flex-basis: calc(50% - 1rem);
+  /* Margin around item */
+  margin: 0.5rem;
+  /* Align items top of their container */
+  vertical-align: top;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  /* On smaller screens make each item take up the full width of the container */
+  .product-list li {
+    flex-basis: 100%;
+  }
+}

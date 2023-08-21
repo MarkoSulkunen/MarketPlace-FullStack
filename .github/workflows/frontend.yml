@@ -1,0 +1,74 @@
+# Name of the workflow
+name: Frontend
+
+# event on which to trigger the workflow
+on: push
+
+# global environment variables
+env:
+  MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE}}
+
+# the jobs in the workflow
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      MYSQL_HOST: ${{ secrets.MYSQL_HOST}}
+      MYSQL_USERNAME: ${{ secrets.MYSQL_USERNAME}}
+      MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD}}
+    steps:
+      - name: Output the env values
+        run: |
+          echo "MYSQL_DATABASE: ${{ env.MYSQL_DATABASE}}"
+          echo "MYSQL_HOST: ${{ env.MYSQL_HOST}}"
+          echo "MYSQL_USERNAME: ${{ env.MYSQL_USERNAME}}"
+          echo "MYSQL_PASSWORD: ${{ env.MYSQL_PASSWORD}}"
+
+  # Name of the job
+  build:
+    # The runner to use
+    runs-on: ubuntu-latest
+    # The steps to execute
+    steps:
+      # Step to fetch the code from the repo
+      - name: Fetch code
+        uses: actions/checkout@v2
+
+      # Step to install the latest version of Node.js
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      # Step to install the required dependencies for Vite
+      - name: Install dependencies
+        run: npm install esbuild@0.12.28
+          
+      # Step to install Vite
+      - name: Install Vite
+        run: npm install -g vite
+
+      # Step to install the project dependencies
+      - name: Install dependencies
+        working-directory: ./frontend
+        run: npm install
+
+      # Step to build the project
+      - name: Build project
+        working-directory: ./frontend
+        run: npm run build
+
+      # Step to upload the build artifacts
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: frontend/build
+
+  # Name of the job
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the deploy on Render
+        run: curl -X GET ${{ secrets.RENDER_FRONTEND_TRIGGER }}
