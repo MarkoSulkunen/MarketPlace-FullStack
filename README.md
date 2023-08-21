@@ -8,7 +8,7 @@ https://marketplace-frontend-3x8f.onrender.com/
 
 Installation instructions:
 
-1.  Clone the repository using the command: git clone https://github.com/TiTe-5G00EV16/2023-final-project-MarkoSulkunen
+1.  Clone the repository using the command: git clone https://github.com/MarkoSulkunen/MarketPlace_FullStack
 
 2.  Navigate to the root directory of the project using the command: cd MarketPlace_FullStack
 
