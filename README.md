@@ -1,16 +1,16 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/qBr6G7dS)
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-8d59dc4de5201274e310e4c54b9627a8934c3b88527886e3b421487c677d23eb.svg)](https://classroom.github.com/a/qBr6G7dS)
-# final-project
-Web Programming 2023 - Final Project
-
 Address to the running service:
 https://marketplace-frontend-3x8f.onrender.com/
 
+
+![2products](https://github.com/MarkoSulkunen/MarketPlace_FullStack/assets/112402293/b337fd05-7a1e-41d1-b89c-4fbd7a2b8012)
+
+
+
 Installation instructions:
 
-1.  Clone the repository using the command: git clone https://github.com/TiTe-5G00EV16/2023-final-project-MarkoSulkunen
+1.  Clone the repository using the command: git clone https://github.com/MarkoSulkunen/MarketPlace_FullStack
 
-2. Navigate to the root directory of the project using the command: cd 2023-final-project-MarkoSulkunen.
+2.  Navigate to the root directory of the project using the command: cd MarketPlace_FullStack
 
 3.  Install the required dependencies for the backend using the command: npm install.
 
@@ -25,10 +25,14 @@ MYSQL_PASSWORD='productspassword'
 MYSQL_DATABASE='products_db'
 PORT=5000
 JWT_SECRET=secretkey
-7. Navigate to the backend directory and start the backend server using the command: node server.js
-8. Start containers using the command: docker-compose up -d
-9. Navigate to the frontend directory and start frontend using the command: npm run dev
-10. Open cypress to run tests using the command: npx cypress open
+
+8. Navigate to the backend directory and start the backend server using the command: node server.js
+   
+10. Start containers using the command: docker-compose up -d
+    
+12. Navigate to the frontend directory and start frontend using the command: npm run dev
+    
+14. Open cypress to run tests using the command: npx cypress open
 
 Summary:
 
@@ -38,9 +42,3 @@ The app includes a login and signup form for user authentication, and local stor
 
 The Market Place is designed to be responsive to all kinds of screen sizes. On larger screens, two products will be listed horizontally, while on smaller screens, the entire list will be vertical, and the navigation can be opened from a side drawer.
 This app is built using ReactJS for the frontend, NodeJS with ExpressJS for the backend, and PostgreSQL for the database. The app also uses React-Query for client-side data fetching and form management.
-
-The database is hosted on mydb.tamk.fi, while the backend API and frontend are hosted on Render.
-
-Challenges:
-
-Most of the challenges that I faced when implementing the frontend to work correctly with the backend were due to my forgetfulness and incorrect implementation methods. For instance, when I tried to add the user's name and email information to the product table while adding a new product, I initially encountered issues with sending the correct values. However, after spending a considerable amount of time researching on google and going through React tutorials, I was finally able to get all these functionalities to work as intended.
