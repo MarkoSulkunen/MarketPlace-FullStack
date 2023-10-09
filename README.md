@@ -1,7 +1,3 @@
-Address to the running service:
-https://marketplace-frontend-3x8f.onrender.com/
-
-
 ![2products](https://github.com/MarkoSulkunen/MarketPlace_FullStack/assets/112402293/b337fd05-7a1e-41d1-b89c-4fbd7a2b8012)
 
 
